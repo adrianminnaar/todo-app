@@ -1,4 +1,10 @@
-.header{
-    background-image: url('../images/to\ do\ image\ 4.jpg');
+#top{
+    background-color: rgb(40, 106, 106);
+    background-image: url('../images/22222.jpg');
+    text-align: center;
     
+}
+#title{
+    background-color: aqua;
+
 }
