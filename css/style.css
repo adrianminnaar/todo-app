@@ -1,152 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-
-:root {
-  --container-height: 600px;
-  --contaier-width: 400px;
-  --header-height: 150px;
-}
-#newtodo{
-  color:#191717
-}
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
+@import url("sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==");
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family:Arial, Helvetica, sans-serif
+  margin: 0
+
 }
-html {
-  font-size: 20px;
+#date{
+  display: flex;
+  color: white;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .container {
-  background-color: white;
-  width: var(--contaier-width);
-  height: var(--container-height);
-
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e1e3ea;
+  height: 100vh;
+  font-family: sans-serif;
 }
-header {
-  width: 100%;
-  height: var(--header-height);
+
+.app {
+  margin-top: 75px;
+  width: 60%;
+}
+
+@media (max-width:768px) {
+  .app {
+    width: 90%;
+  }
+}
+
+.app h1 {
   background-image: url('../images/22222.jpg');
-  background-size: cover;
-  border-radius: 5px 5px 0 0;
+  color: rgb(27, 23, 23);
+  font-size: 40px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: .5rem .5rem 0 0;
+  background-color: #cfc9ca;
+  font-family: "Rajdhani", sans-serif;
 }
-.header {
-  width: 100%;
-  height: 100px;
+
+.app form {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #191717;
-  
-}
-.new-todo {
   width: 100%;
-  height: 50px;
-  padding: 0.25rem 0;
+  background-color: #262e4c;
 }
-.new-todo form {
-  display: flex;
-  align-items: center;
-}
-.new-todo form input {
-  flex: 1;
-  height: 40px;
-  background-color: white;
-  color: black;
-  border: solid black;
-  outline: black;
-  padding: 0.5rem;
-  font-size: 1rem;
-  color: #fff;
-}
-.new-todo form button {
-  width: 60px;
-  height: 40px;
-  font-size: 1rem;
-  background-color: transparent;
-  color: rgba(0, 17, 255, 0.629);
+
+.app form input {
   border: none;
-  border-left: 0px;
+  background-color: #3c4979;
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  width: 90%;
+}
+
+.app form button {
+  border: none;
+  color: white;
+  background-color: #121756;
+  font-size: 25px;
+  font-weight: 600;
+  height: 42px;
+  width: 10%;
+}
+
+.app ul {
+  list-style: none;
+  color: #e0e0e0;
+  padding: 0;
+}
+
+.app ul li {
+  padding: 10px;
+  background-color: #262e4c;
+  border-bottom: 1px solid #3a4674;
+}
+
+.check {
+  width: 0.8em;
+  height: 0.8em;
   cursor: pointer;
-}
-.new-todo form button:hover {
-  text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.8);
-}
-
-#todos-list {
-  height: calc(var(--container-height) - var(--header-height));
-  background-color: #fff;
-  padding: 0.5rem;
-  border: 1px solid rgb(219, 219, 219);
-  overflow: scroll;
-  border-radius: 0 0 5px 5px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgb(255, 255, 255);
+  -webkit-appearance: none;
 }
 
-#todos-list .todo {
-  display: flex;
-  align-items: center;
-  padding: 0.75rem 0.5rem;
-  border-radius: 5px;
-}
-#todos-list .todo:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-#todos-list .todo * {
-  cursor: pointer;
-  margin-right: 0.5rem;
-}
-#todos-list .todo i {
-  font-size: 0.9rem;
-}
-#todos-list .todo p {
-  flex: 1;
-  word-break: break-all;
-}
-.checked {
-  text-decoration: line-through;
-  color: grey;
-}
-#todos-list .todo .bi-pencil-square {
-  color: rgb(31, 177, 48);
-}
-#todos-list .todo .bi-trash {
-  color: rgb(236, 82, 82);
-  margin: 0;
+.check:checked {
+  background-color: #1d6fd250;
 }
 
-.notification {
-  position: absolute;
-
-  width: calc(3 * var(--contaier-width) / 4);
-  height: 60px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  opacity: 0.9;
-
-  border-radius: 8px;
-  background-color: rgb(233, 81, 81);
-  top: 10px;
-  right: calc(-3 * var(--contaier-width) / 4);
-
+.task {
+  font-size: 18px;
+  padding: 0 10px;
+  width: fit-content;
+  background: transparent;
+  border: none;
   color: #fff;
-
-  transition: 300ms right ease-in-out;
 }
 
-.notif-enter {
-  right: 10px;
+.task:focus {
+  outline: none;
+}
+
+.app ul li i {
+  float: right;
+  cursor: pointer;
+}
+
+.app ul li i:hover {
+  color: rgb(255, 82, 82);
+}
+
+.completed {
+  color: rgba(192, 192, 192, 0.8);
+  text-decoration: line-through;
 }
