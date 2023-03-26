@@ -7,3 +7,44 @@
   'GRAD' 0,
   'opsz' 48
 }
+#input{
+  
+  width: 20cm;
+  height: 1cm;
+  border: solid black;
+  position:flex;
+  margin-left: 25%;
+  margin-top: 5%;
+
+}
+.header{
+  background-color: rgba(164, 190, 190, 0.43);
+  height: 5cm;
+  background-image: url("../images/1048267.jpg");
+
+}
+#list{
+  position:flex;
+  margin-left: 30%;
+  background-color: rgba(224, 228, 228, 0.833);  
+  border: 1mm solid black;
+  border-left: 50%;
+  border-right:50%;
+  font-size:larger;
+}
+.to_do_list{
+  background-image: url("../images/1048267.jpg");
+  
+}
+.material-icons{
+  border: none;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 5%;
+  
+  
+}
+input:checked+span{
+  text-decoration: line-through;
+}
