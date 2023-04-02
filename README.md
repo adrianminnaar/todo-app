@@ -20,7 +20,8 @@ This web app allows users to :save todo items. Into a list format For example:
 * Input todo items in the input box.
 * Click enter button or enter on keyboard and save the item to a list
 * The todo list item can be edit, by click the edit icon.
-* In the edit,you may add a due date,ckick the checked icon to mark item as completeted 
+* In the edit,you may add a due date.
+* Double click the checked icon to mark item as completeted(strike through) 
 * Once edited all changes must be saved.
 * input can be sorted alphabetically, by after inputting item and click the sort button.
 

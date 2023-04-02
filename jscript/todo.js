@@ -1,11 +1,14 @@
 // todo list will be stored in local storage//
+//created array to store todo list//
 const itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 
+//creating todo items//
 document.querySelector("#enter").addEventListener("click", () => {
   const item = document.querySelector("#item")
   createItem(item)
 })
-
+//creating todo items using enter key//
+//if enter key is pressed, create item//
 document.querySelector("#item").addEventListener("keypress", (e) => {
   if(e.key === "Enter"){
     const item = document.querySelector("#item")
@@ -19,7 +22,7 @@ function displayDate(){
   date = date[1] + " " + date[2] + " " + date[3] 
   document.querySelector("#date").innerHTML = date 
 }
-//Display todo list//
+//Display todo list using tempr 
 function displayItems(){
   let items = ""
   for(let i = 0; i < itemsArray.length; i++){
@@ -103,20 +106,24 @@ function CheckboxListeners(){
             checkbox.value = "unchecked"
             checkbox.style.color = "green"
             inputs[i].style.textDecoration = "line-through"
-            inputs[i].style.color = "none"            
+            inputs[i].style.color = "none"
+            this.value="unchecked"
+                    
             
           }
           else{
             checkbox.value = "checked"
             checkbox.style.color = "green"
-            inputs[i].style.textDecoration = "none"   
+            inputs[i].style.textDecoration = "none" 
+            this.value="checked" 
+           
           }
-          console.log(inputs[i].classList)
+          console.log(checkbox.value)
         })
     })
         
     }
-//add due date to todo list
+//add due date to todo list//
 function DateListeners(){
     const date = document.querySelectorAll(".fa-calendar")
     const inputs = document.querySelectorAll(".input-controller textarea")
@@ -134,7 +141,7 @@ function DateListeners(){
 
         })
     })}
-    //Sort do list//
+    //Sort do list alphabetically//
     function SortListeners(){
       const itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
         const sortAl = document.querySelectorAll("#sort")
@@ -151,25 +158,27 @@ function DateListeners(){
         })
     }
 
-
+//Create, delete, update functions//
+//created item and saved to local storage//
 function createItem(item){
   itemsArray.push(item.value)
   localStorage.setItem('items', JSON.stringify(itemsArray))
   location.reload()
 }
-
+//deleted item from local storage//
 function deleteItem(i){
   itemsArray.splice(i,1)
   localStorage.setItem('items', JSON.stringify(itemsArray))
   location.reload()
 }
-
+//updated item that were updated, in local storage//
 function updateItem(text, i){
   itemsArray[i] = text
   localStorage.setItem('items', JSON.stringify(itemsArray))
   location.reload()
 }
-
+//display date and todo list//
+//create Methods to display date and todo list//
 window.onload = function() {
   displayDate()
   displayItems()
