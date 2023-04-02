@@ -3,7 +3,7 @@
     margin: 0;
   }
   
-  /* #5b7065, black */
+  /*Body of the app styling*/
   body {
     background: rgb(79, 92, 92);
     
@@ -11,21 +11,21 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     min-height: 100vh;
   }
-  
-  button {
+  /*setting button dimension*/
+  /*button {
     height: fit-content;
     cursor: pointer;
     color: #04202c;
     background-color: #c9d1c8;
-  }
-  
+  }*/
+  /*App dimension and colour*/
   .app {
     width: 600px;
     margin: auto;
     padding-top: 50px;
     color: white;
   }
-  
+  /*input header styling*/
   .input-header {
     display: flex;
     justify-content: space-between;
@@ -35,50 +35,63 @@
     border-top-right-radius: 10px;
     padding: 0px 0px 10px 0px;
   }
-  
+  /*input area styling*/
   .to-do-input input {
-    width: 250px;
+    
     font-family: inherit;
     border: none;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 10px;
     outline: none;
+    width: 300px
     
   }
-  
+   /*input button styling*/
   .to-do-input button {
-    color: #5b7065;
+    color: #1e2e26;
     font-family: inherit;
     border: none;
     padding: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
   }
-  
+   /*input sort button styling*/
+  #sort{
+    color: #1e2e26;
+    font-family: inherit;
+    border: none;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 5px;
+  }
+   /*to list styling*/
   .to-do-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
-  
+   /*todo item  buttons*/
   .to-do-list i {
-    color: #222822;
+    color: hsl(120, 8%, 15%);
     cursor: pointer;
   }
   
-  .to-do-list .fa-pen-to-square {
-    color: #151816;
-  }
-  
+   /*button when list is edited styling*/
   .to-do-list button {
     padding: 8px;
     border-radius: 10px;
     cursor: pointer;
     font-family: inherit;
     border: none;
+     
   }
   
+
+   /*item styling*/
   .item {
     display: flex;
     flex-direction: column;
@@ -90,15 +103,12 @@
     margin-top: 10px;
     
   }
-  .taskdate{
-color: #5b7065;
-  }
-  
+ /*input controller area styling*/
   .input-controller {
     display: flex;
     gap: 10px;
   }
-  
+   /*input controller textarea styling*/
   .input-controller textarea {
     width: 100%;
     outline: none;
@@ -113,36 +123,32 @@ color: #5b7065;
     transition: all 0.30s ease-in-out;
   }
   
-  textarea:focus {
+  /*textarea:focus {
     box-shadow: 0 0 5px rgb(20, 19, 19);
-  }
+  }*/
   
+   /*edit controller styling*/
   .edit-controller {
     display: flex;
     gap: 5px;
   }
-  
+  /*update controller styling*/
   .update-controller {
     display: none;
   }
-  
+  /*edit controller styling*/
   @media(max-width: 768px) {
     .app {
       width: 95%;
       text-align: center;
     }
-  
+    /*input header dimensions*/
     .input-header {
       flex-direction: column;
       padding-bottom: 20px;
     }
   
-    .to-do-input {
-      display: flex;
-    }
+
   
-    .to-do-input input {
-      width: 300px;
-    }
   
   }
