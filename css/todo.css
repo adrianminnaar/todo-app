@@ -11,13 +11,7 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     min-height: 100vh;
   }
-  /*setting button dimension*/
-  /*button {
-    height: fit-content;
-    cursor: pointer;
-    color: #04202c;
-    background-color: #c9d1c8;
-  }*/
+
   /*App dimension and colour*/
   .app {
     width: 600px;
