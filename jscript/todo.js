@@ -43,6 +43,8 @@ function displayItems(){
               </div>`
   }
   document.querySelector(".to-do-list").innerHTML = items
+  console.log(itemsArray)
+
   DeleteListeners()
   EditListeners()
   SaveListeners()
@@ -136,6 +138,7 @@ function DateListeners(){
             }
 
             document.querySelector(".input-controller textarea"),inputs[i].innerHTML += "  "+ date
+            console.log(date)
 
             
 
