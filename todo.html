@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--style sheet-->
-  <link rel="stylesheet" href="../todo-app/css/todo.css">  
+  <link rel="stylesheet" href="/css/todo.css">  
   <!--Font Awesome style sheet-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <title>To-do list</title>
@@ -34,7 +34,31 @@
     </div>
   </main>
 <!--link to J Script file-->
-  <script src="../todo-app/jscript/todo.js"></script>
+  <script src="/jscript/todo.js">
+        checkbox.forEach((checkbox, i) => {
+      checkbox.addEventListener("click", () => {         
+                   
+          if(checkbox.value === "checked"){
+            checkbox.value = "unchecked"
+            checkbox.style.color = "green"
+            inputs[i].style.textDecoration = "line-through"
+            inputs[i].style.color = "none"
+            this.value="unchecked"
+                    
+            
+          }
+          else{
+            checkbox.value = "checked"
+            checkbox.style.color = "green"
+            inputs[i].style.textDecoration = "none" 
+            this.value="checked" 
+           
+          }
+          console.log(checkbox.value)
+        })
+    })
+  </script>
+
 
 
 </body>

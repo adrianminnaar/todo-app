@@ -106,10 +106,15 @@ function CheckboxListeners(){
                    
           if(checkbox.value === "checked"){
             checkbox.value = "unchecked"
-            checkbox.style.color = "green"
-            inputs[i].style.textDecoration = "line-through"
+            checkbox.style.color = "red"
+            inputs[i].style.textDecoration = "line-through 4px red"
             inputs[i].style.color = "none"
             this.value="unchecked"
+            
+
+            
+
+            
                     
             
           }
@@ -118,6 +123,10 @@ function CheckboxListeners(){
             checkbox.style.color = "green"
             inputs[i].style.textDecoration = "none" 
             this.value="checked" 
+        
+            
+
+            
            
           }
           console.log(checkbox.value)
